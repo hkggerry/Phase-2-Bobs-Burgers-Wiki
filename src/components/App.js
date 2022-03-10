@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import NavBar from "./NavBar"
@@ -8,6 +8,15 @@ import Episodes from "./Episodes";
 
 
 function App() {
+  const [data, setData] = useState([])
+
+  useEffect(()=>{
+    fetch("https://bobsburgers-api.herokuapp.com/characters/")
+    .then(r => r.json())
+    .then(data => setData(data))
+  }, [])
+
+
   return (
     <div>
       <Header />
@@ -17,7 +26,7 @@ function App() {
             <HomePage />
           </Route>
           <Route exact path="/characters">
-            <Characters />
+            <Characters data={data}/>
           </Route>
           <Route exact path="/episodes">
             <Episodes />

@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import CharacterList from "./CharacterList"
 
-function Characters() {
-    // const [image, setImages] = useState(null)
-
-    // useEffect(()=>{
-    //     fetch("https://bobsburgers-api.herokuapp.com/characters/")
-    //     .then(r => r.json())
-    //     .then(data => console.log(data))
-    // }, [])
+function Characters( {data} ) {
     
+    const characterData = data.map((eachCharacter) => {
+        return <CharacterList key={eachCharacter.id} data={eachCharacter}/>
+    }
+    )
+
     return (
     <div>
         <p>You will find all the characters in this page</p>
-        {/* <img src={data.image} alt="loading" /> */}
+        {characterData}
     </div>
     )  
 }
