@@ -1,9 +1,14 @@
 import React from "react";
+import EpisodeList from "./EpisodeList";
 
-function Episodes() {
+function Episodes( {episodes} ) {
+    const episodeList = episodes.map(eachEpisode => {
+        return <EpisodeList key={eachEpisode.id} episodes={eachEpisode}/>
+    })
+
     return (
     <div>
-        <p>EPISODES!!</p>
+        {episodeList}
     </div>
     )  
 }
