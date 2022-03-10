@@ -1,5 +1,6 @@
 import React from "react";
 import CharacterList from "./CharacterList"
+// import { Card } from "semantic-ui-react";
 
 function Characters( {data} ) {
     
@@ -11,7 +12,9 @@ function Characters( {data} ) {
     return (
     <div>
         <p>You will find all the characters in this page</p>
+        {/* <Card.Group itemsPerRow={6}> */}
         {characterData}
+        {/* </Card.Group> */}
     </div>
     )  
 }

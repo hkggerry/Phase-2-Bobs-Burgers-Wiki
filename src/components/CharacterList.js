@@ -1,8 +1,10 @@
 import React from "react";
+// import { Card } from "semantic-ui-react";
 
 function CharacterList( {data} ){
 
     return (
+        // <Card>
         <div className="character">
             <div className="image">
                 <img src={data.image} alt={data.name} />
@@ -13,6 +15,7 @@ function CharacterList( {data} ){
                 <span>{data.occupation}</span>
             </div>
         </div>
+        // </Card>
     )
 }
 
