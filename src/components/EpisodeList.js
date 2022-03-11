@@ -4,8 +4,10 @@ function EpisodeList({episodes}){
     console.log(episodes)
     return (
         <ul className="episodes">
-            <div>
+            <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
+            <input type="checkBox" />
                 <strong>{episodes.name} S-{episodes.season}.{episodes.episode}</strong>
+                
             </div>
         </ul>
     )
