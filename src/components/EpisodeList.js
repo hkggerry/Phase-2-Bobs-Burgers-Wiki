@@ -1,7 +1,6 @@
 import React from "react";
 
 function EpisodeList({episodes}){
-    console.log(episodes)
     return (
         <ul className="episodes">
             <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
