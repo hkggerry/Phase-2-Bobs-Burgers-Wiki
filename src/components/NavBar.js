@@ -16,6 +16,19 @@ function NavBar() {
     <NavLink to="/" exact style={linkStyles} activeStyle={{background:"khaki"}}>Home</NavLink>
     <NavLink to="/characters" exact style={linkStyles} activeStyle={{background:"khaki"}}>Characters</NavLink>
     <NavLink to="/episodes" exact style={linkStyles} activeStyle={{background:"khaki"}}>Episodes</NavLink>
+    <div><br /></div>
+    <NavLink to="/season1" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 1</NavLink>
+    <NavLink to="/season2" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 2</NavLink>
+    <NavLink to="/season3" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 3</NavLink>
+    <NavLink to="/season4" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 4</NavLink>
+    <NavLink to="/season5" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 5</NavLink>
+    <NavLink to="/season6" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 6</NavLink>
+    <NavLink to="/season7" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 7</NavLink>
+    <NavLink to="/season8" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 8</NavLink>
+    <NavLink to="/season9" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 9</NavLink>
+    <NavLink to="/season10" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 10</NavLink>
+    <NavLink to="/season11" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 11</NavLink>
+    <NavLink to="/season12" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 12</NavLink>
   </div>
   )}
 

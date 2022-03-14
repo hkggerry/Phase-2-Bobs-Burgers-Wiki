@@ -8,10 +8,10 @@ function Home({image}){
 
     return (
     <div>
-        <h2>Welcome to the Home Page </h2>
-        <p>Ever since college, I have been a huge fan of Bob's Burgers. Bob's Burgers is an American animated sitcom that features Bob the restaurant owner and his family. Every episodes are worth the rewatch and I would normally have it on in the background as white noise. </p>
-        <p>For all the fans out there, I would like to create a website for Bob's Burgers as my Phase 2 project. Website will include a list of characters that featured in the show and an episode list of all 12 seasons of the show. A check box will be included in the episode list to help keeping track which episode you have watched already.</p>
-        <div className="quickimage"> <img src={quickImage[5]} /> </div>
+        <h3>Welcome Home!</h3>
+        <p>Bob's Burgers is an American animated sitcom that features Bob the restaurant owner and his family.</p> 
+        <p>For all the fans out there, I have here a website that includes an entire list of characters that has featured in the show and an episode list for all 12 seasons. Feel free to play around with the check box in the episode list to keep track of the episodes you watched. Enjoy!</p>
+        <div className="quickimage"> <img src={quickImage[0]} /> </div>
     </div>
     
     )}

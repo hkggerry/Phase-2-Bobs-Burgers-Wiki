@@ -4,6 +4,7 @@ import NavBar from "./NavBar"
 import Home from "./HomePage";
 import Characters from "./Characters";
 import Episodes from "./Episodes";
+import Season1 from "./Seasons/Season1"
  
 
 function App() {
@@ -13,19 +14,19 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("")  
 
   useEffect(()=>{
-    fetch("https://bobsburgers-api.herokuapp.com/characters/")
+    fetch("http://localhost:3000/characters")
     .then(r => r.json())
     .then(data => setData(data))
   }, [])
 
   useEffect(()=>{
-    fetch("https://bobsburgers-api.herokuapp.com/episodes/")
+    fetch("http://localhost:3000/episodes")
     .then(r => r.json())
     .then(episode => setEpisodes(episode))
   }, [])
 
   useEffect(()=>{
-    fetch("https://bobsburgers-api.herokuapp.com/endCreditsSequence/")
+    fetch("http://localhost:3000/endCreditsSequence")
     .then(r => r.json())
     .then(image => quickImage(image))
   }, [])
@@ -34,7 +35,8 @@ function App() {
 
   return (
     <div>
-      <h1>Bob's Burgers Wiki 🍔 </h1>
+      <h1>Bob's Burgers Wiki🍔 </h1>
+      <hr />
         <NavBar />
         <Switch>
           <Route exact path="/">
@@ -46,8 +48,10 @@ function App() {
           <Route exact path="/episodes">
             <Episodes episodes={episodes}/>
           </Route>
+          <Route exact path="/season1" >
+            <Season1 />
+          </Route>
         </Switch>
-        
     </div>
   );
 }
