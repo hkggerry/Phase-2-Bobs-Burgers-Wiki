@@ -8304,7 +8304,14 @@
             "totalViewers": "1.181 Million",
             "url": "https://bobsburgers-api.herokuapp.com/episodes/228"
             }
+    ],
+    "suggestionBox":[
+        {
+            "title": 123,
+            "comments": "321"
+        }
     ], 
+    
     "endCreditsSequence": [
         {
         "id": 1,

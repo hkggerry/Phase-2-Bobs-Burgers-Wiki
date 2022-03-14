@@ -1,17 +1,16 @@
 import React from "react";
 
-function Season1(){
-    return ("Hello World")
+function Season1({episodes}){
+    console.log(episodes)
+    const season1List = episodes.map(episode => <li>{episode.name}</li>)
+    const season1Ep = season1List.slice(0,13)
 
-//     const episodeList = episodes.map(eachEpisode => {
-//         return eachEpisode[0,5]
-//     })
+    return (
+        <div>
+            <br />
+            {season1Ep}
+        </div>
+    )
 
-//     const season1Ep = episodeList.slice(0,5)
-
-// return (
-//     <strong>{episodeList.episode}</strong>
-    
-// )}
 }
 export default Season1;

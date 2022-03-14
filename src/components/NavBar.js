@@ -15,7 +15,8 @@ function NavBar() {
   <div>
     <NavLink to="/" exact style={linkStyles} activeStyle={{background:"khaki"}}>Home</NavLink>
     <NavLink to="/characters" exact style={linkStyles} activeStyle={{background:"khaki"}}>Characters</NavLink>
-    <NavLink to="/episodes" exact style={linkStyles} activeStyle={{background:"khaki"}}>Episodes</NavLink>
+    <NavLink to="/episodes" exact style={linkStyles} activeStyle={{background:"khaki"}}>All Episodes</NavLink>
+    <NavLink to="/suggestionbox" exact style={linkStyles} activeStyle={{background:"khaki"}}>Suggestions</NavLink>
     <div><br /></div>
     <NavLink to="/season1" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 1</NavLink>
     <NavLink to="/season2" exact style={linkStyles} activeStyle={{background:"khaki"}}>Season 2</NavLink>

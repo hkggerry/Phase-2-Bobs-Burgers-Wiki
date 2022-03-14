@@ -4,6 +4,7 @@ import NavBar from "./NavBar"
 import Home from "./HomePage";
 import Characters from "./Characters";
 import Episodes from "./Episodes";
+import SuggestionBox from "./SuggestionBox";
 import Season1 from "./Seasons/Season1"
  
 
@@ -12,6 +13,7 @@ function App() {
   const [episodes, setEpisodes] = useState([])
   const [image, quickImage] = useState([])
   const [searchTerm, setSearchTerm] = useState("")  
+  const [suggestions, setSuggestions] = useState([])
 
   useEffect(()=>{
     fetch("http://localhost:3000/characters")
@@ -31,6 +33,14 @@ function App() {
     .then(image => quickImage(image))
   }, [])
 
+  useEffect(()=>{
+    fetch("http://localhost:3000/suggestionBox")
+    .then(r => r.json())
+    .then(input => setSuggestions(input))
+  }, [])
+
+  
+
   const filteredCharacter = data.filter(name => name.name.toLowerCase().includes(searchTerm.toLowerCase()))
 
   return (
@@ -48,8 +58,11 @@ function App() {
           <Route exact path="/episodes">
             <Episodes episodes={episodes}/>
           </Route>
+          <Route exact path="/suggestionbox">
+            <SuggestionBox suggestions ={suggestions}/>
+          </Route>
           <Route exact path="/season1" >
-            <Season1 />
+            <Season1 episodes={episodes}/>
           </Route>
         </Switch>
     </div>
