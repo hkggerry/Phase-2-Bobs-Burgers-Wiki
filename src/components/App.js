@@ -51,6 +51,7 @@ function App() {
   }, [])
 
   function handleAddItem(newSuggestion){
+    console.log(suggestions)
     setSuggestions([...suggestions, newSuggestion])
   }
 

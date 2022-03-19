@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function Home({image}){
     const quickImage = image.map((image) => {
         return image.image
