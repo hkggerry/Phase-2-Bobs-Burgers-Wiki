@@ -7,12 +7,12 @@ function CharacterList( {data} ){
         // <Card>
         <div className="character">
             <div className="image">
-                <img src={data.image} alt={data.name} />
+                <img src={data.image} alt={data.name} height="300px" />
             </div>
             <div className="details">
                 <strong>{data.name}</strong>
                 <br/>
-                <span>{data.occupation}</span>
+                <p>{data.occupation}</p>
             </div>
         </div>
         // </Card>

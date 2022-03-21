@@ -21,7 +21,9 @@ function Characters( {data, setSearchTerm, searchTerm} ) {
             onChange={(e) => setSearchTerm(e.target.value)} />
         </form>
         {/* <Card.Group itemsPerRow={6}> */}
+        <div className="container">
         {characterData}
+        </div>
         {/* </Card.Group> */}
     </div>
     )  
