@@ -21,6 +21,8 @@ function SuggestionBox({suggestions, onAddItem}){
     
     return (
         <div>
+          <h4>Out of all the Bob's Burgers characters, who is your favorite?</h4>
+          <h4>Type it in the comment box below and share with us!</h4>
             {suggestionList}
         <form className="NewItem" onSubmit={handleSubmit}>
       <label>

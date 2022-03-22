@@ -1,6 +1,5 @@
 import React from "react";
 import CharacterList from "./CharacterList"
-// import { Card } from "semantic-ui-react";
 
 function Characters( {data, setSearchTerm, searchTerm} ) {
     
@@ -20,11 +19,9 @@ function Characters( {data, setSearchTerm, searchTerm} ) {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)} />
         </form>
-        {/* <Card.Group itemsPerRow={6}> */}
         <div className="container">
         {characterData}
         </div>
-        {/* </Card.Group> */}
     </div>
     )  
 }
