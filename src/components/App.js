@@ -3,7 +3,6 @@ import { Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar"
 import Home from "./HomePage";
 import Characters from "./Characters";
-import Episodes from "./Episodes";
 import SuggestionBox from "./SuggestionBox";
 import Season1 from "./Seasons/Season1"
 import Season2 from "./Seasons/Season2"
@@ -22,7 +21,6 @@ import Season12 from "./Seasons/Season12"
 function App() {
   const [data, setData] = useState([])
   const [episodes, setEpisodes] = useState([])
-  const [image, quickImage] = useState([])
   const [searchTerm, setSearchTerm] = useState("")  
   const [suggestions, setSuggestions] = useState([])
 
@@ -36,12 +34,6 @@ function App() {
     fetch("http://localhost:3000/episodes")
     .then(r => r.json())
     .then(episode => setEpisodes(episode))
-  }, [])
-
-  useEffect(()=>{
-    fetch("http://localhost:3000/endCreditsSequence")
-    .then(r => r.json())
-    .then(image => quickImage(image))
   }, [])
 
   useEffect(()=>{
@@ -65,13 +57,10 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path="/">
-            <Home image={image}/>
+            <Home data={data}/>
           </Route>
           <Route exact path="/characters">
             <Characters data={filteredCharacter} setSearchTerm={setSearchTerm} searchTerm={searchTerm}/>
-          </Route>
-          <Route exact path="/episodes">
-            <Episodes episodes={episodes}/>
           </Route>
           <Route exact path="/suggestionbox">
             <SuggestionBox suggestions ={suggestions} onAddItem={handleAddItem}/>
@@ -112,7 +101,6 @@ function App() {
           <Route exact path="/season12" >
             <Season12 episodes={episodes}/>
           </Route>
-    
         </Switch>
     </div>
   );

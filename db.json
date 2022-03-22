@@ -8327,18 +8327,12 @@
       "id": 5
     },
     {
-      "comments": "Boyz 4 Now",
+      "comments": "Boyz4Now",
       "id": 6
-    }
-  ],
-  "endCreditsSequence": [
+    },
     {
-      "id": 1,
-      "image": "https://bobsburgers-api.herokuapp.com/images/endCreditsSequence/1.jpg",
-      "season": 1,
-      "episode": 1,
-      "episodeUrl": "https://bobsburgers-api.herokuapp.com/episodes/1",
-      "url": "https://bobsburgers-api.herokuapp.com/endCreditsSequence/1"
+      "comments": "Boo Boo ",
+      "id": 7
     }
   ]
 }

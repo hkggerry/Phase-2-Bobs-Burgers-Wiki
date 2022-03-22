@@ -7,7 +7,7 @@ function Season6({episodes}){
 
     return (
         <div>
-            <br />
+            <h4>Episodes 88-106</h4>
             {season6Ep}
         </div>
     )

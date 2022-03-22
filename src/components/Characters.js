@@ -10,7 +10,8 @@ function Characters( {data, setSearchTerm, searchTerm} ) {
 
     return (
     <div>
-        <p>You will find all the characters in this page</p>
+        <h4>Here is a list of all the characters appeared in the show. Do you remember all of them?</h4>
+        <h4>Feel free to use the search bar below:</h4>
         <form className="searchbar" >
             <input 
             type="text"
