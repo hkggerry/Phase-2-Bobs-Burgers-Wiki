@@ -11,7 +11,7 @@ function Home({data}){
         <center>
             <br />
         <h2>Welcome to the Bob's Burgers Wiki!</h2>
-        <p>Bob's Burgers is an American animated sitcom that features the restaurant owner Bob, wife Linda, and his three spicy children.</p> 
+        <p>Bob's Burgers is an American animated sitcom that features restaurant owner Bob, wife Linda, and his three spicy children.</p> 
         <p>You can find all the basic information for this show through the Navagation bars above.</p>
         
         <div> 
