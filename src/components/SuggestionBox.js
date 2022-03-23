@@ -36,7 +36,6 @@ function SuggestionBox({suggestions, onAddItem}){
             </form>
           </h4>
             {suggestionList}
-        
       </div>
     )
 }

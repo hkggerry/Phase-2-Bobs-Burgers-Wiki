@@ -16,7 +16,6 @@ import Season9 from "./Seasons/Season9"
 import Season10 from "./Seasons/Season10"
 import Season11 from "./Seasons/Season11"
 import Season12 from "./Seasons/Season12"
- 
 
 function App() {
   const [data, setData] = useState([])
