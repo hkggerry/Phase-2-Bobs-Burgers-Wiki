@@ -16,7 +16,10 @@ function SuggestionBox({suggestions, onAddItem}){
             body: JSON.stringify(commentData),
         })
         .then((r)=>r.json())
-        .then((data) => onAddItem(data))
+        .then((data) => {
+          onAddItem(data)
+          setComments("")
+        })
         }
     
     return (
