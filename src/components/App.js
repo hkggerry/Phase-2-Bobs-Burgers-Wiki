@@ -4,18 +4,19 @@ import NavBar from "./NavBar"
 import Home from "./HomePage";
 import Characters from "./Characters";
 import SuggestionBox from "./SuggestionBox";
-import Season1 from "./Seasons/Season1"
-import Season2 from "./Seasons/Season2"
-import Season3 from "./Seasons/Season3"
-import Season4 from "./Seasons/Season4"
-import Season5 from "./Seasons/Season5"
-import Season6 from "./Seasons/Season6"
-import Season7 from "./Seasons/Season7"
-import Season8 from "./Seasons/Season8"
-import Season9 from "./Seasons/Season9"
-import Season10 from "./Seasons/Season10"
-import Season11 from "./Seasons/Season11"
-import Season12 from "./Seasons/Season12"
+// import Season1 from "./Seasons/Season1"
+// import Season2 from "./Seasons/Season2"
+// import Season3 from "./Seasons/Season3"
+// import Season4 from "./Seasons/Season4"
+// import Season5 from "./Seasons/Season5"
+// import Season6 from "./Seasons/Season6"
+// import Season7 from "./Seasons/Season7"
+// import Season8 from "./Seasons/Season8"
+// import Season9 from "./Seasons/Season9"
+// import Season10 from "./Seasons/Season10"
+// import Season11 from "./Seasons/Season11"
+// import Season12 from "./Seasons/Season12"
+import Season from "./Season";
 
 function App() {
   const [data, setData] = useState([])
@@ -53,7 +54,7 @@ function App() {
     <div>
       <h1>Bob's Burgers Wiki🍔 </h1>
       <hr />
-        <NavBar />
+        <NavBar episodes={episodes}/>
         <Switch>
           <Route exact path="/">
             <Home data={data}/>
@@ -64,7 +65,11 @@ function App() {
           <Route exact path="/suggestionbox">
             <SuggestionBox suggestions ={suggestions} onAddItem={handleAddItem}/>
           </Route>
-          <Route exact path="/season1" >
+          <Route exact path="/season/:id" >
+            <Season episodes={episodes}/>
+          </Route>
+
+          {/* <Route exact path="/season1" >
             <Season1 episodes={episodes}/>
           </Route>
           <Route exact path="/season2" >
@@ -99,7 +104,7 @@ function App() {
           </Route>
           <Route exact path="/season12" >
             <Season12 episodes={episodes}/>
-          </Route>
+          </Route> */}
         </Switch>
     </div>
   );
