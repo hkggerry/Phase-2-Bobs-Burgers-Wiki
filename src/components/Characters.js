@@ -20,6 +20,13 @@ function Characters( {data, setSearchTerm, searchTerm} ) {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)} />
         </form>
+
+        {/* <form className="numberbox">
+            <input
+            type="text"
+            placeholder="number"/>
+            </form>
+             */}
         <div className="container">
         {characterData}
         </div>

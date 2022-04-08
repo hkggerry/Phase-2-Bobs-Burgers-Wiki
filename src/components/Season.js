@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 
 function Season({episodes}){
 
-    const { id } = useParams("");
-    const seasonList = episodes.map(episode => <li>{episode.name}</li>)
+    const { id } = useParams();
+    const seasonList = episodes.map(episode => <div key={episode.id}><li>{episode.name}</li></div>)
 
         if ( id == 1){
             return seasonList.slice(0,13)
@@ -34,7 +34,6 @@ function Season({episodes}){
         
     return(
         <div>
-            <h2>Season: {id}</h2>
             {seasonList}
         </div>
     )

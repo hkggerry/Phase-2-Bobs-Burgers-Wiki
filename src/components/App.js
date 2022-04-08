@@ -42,7 +42,7 @@ function App() {
     <div>
       <h1>Bob's Burgers Wiki🍔 </h1>
       <hr />
-        <NavBar episodes={episodes}/>
+        <NavBar episodes={episodes}/> 
         <Switch>
           <Route exact path="/">
             <Home data={data}/>

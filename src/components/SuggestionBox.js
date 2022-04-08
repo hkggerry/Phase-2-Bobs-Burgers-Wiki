@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 function SuggestionBox({suggestions, onAddItem}){
     
-    const suggestionList = suggestions.map(input => <li>{input.comments}</li> )
+    const suggestionList = suggestions.map(input => <div key={input.id}> <li>{input.comments}</li></div> )
     const [comments, setComments] = useState("")
 
     function handleSubmit(e){
